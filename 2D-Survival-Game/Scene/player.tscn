@@ -490,3 +490,7 @@ limit_right = 596
 limit_bottom = 476
 
 [node name="Inv_UI" parent="." instance=ExtResource("4_ivevv")]
+offset_left = -46.0
+offset_top = -81.0
+offset_right = 46.0
+offset_bottom = -17.0
