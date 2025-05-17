@@ -310,4 +310,19 @@ build_mode = 1
 polygon = PackedVector2Array(-407, -281, -405, 86, -283, 89, -285, 192, -405, 196, -405, 277, -407, 289, 403, 286, 403, 34, 295, 38, 293, -116, 312, -120, 311, 6, 367, 4, 367, -171, 296, -169, 296, -155, 293, -178, 403, -176, 403, -285)
 
 [node name="Slime" parent="." instance=ExtResource("8_ddf65")]
-position = Vector2(-184, 21)
+position = Vector2(-149, 132)
+
+[node name="Slime2" parent="." instance=ExtResource("8_ddf65")]
+position = Vector2(146, 60)
+
+[node name="Slime3" parent="." instance=ExtResource("8_ddf65")]
+position = Vector2(-326, -201)
+
+[node name="Slime4" parent="." instance=ExtResource("8_ddf65")]
+position = Vector2(186, -196)
+
+[node name="Slime5" parent="." instance=ExtResource("8_ddf65")]
+position = Vector2(-74, -129)
+
+[node name="Slime6" parent="." instance=ExtResource("8_ddf65")]
+position = Vector2(299, 212)
