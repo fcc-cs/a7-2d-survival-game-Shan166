@@ -18,9 +18,11 @@ func _physics_process(delta):
 				cutscenending()
 			if !smoke_has_happened and pathfollower.progress_ratio>=0.99 and !smoke_is_happening:
 				smoke_is_happening=true
+				toggle_smoke()
 				await get_tree().create_timer(1).timeout
 				$world2openingcutscene/TileMapfinished.visible=true
 				$world2openingcutscene/TileMapunfinished2.visible=false
+				toggle_smoke()
 				await get_tree().create_timer(0.5).timeout
 				smoke_has_happened=true
 				smoke_is_happening=false
@@ -44,5 +46,14 @@ func cutscenending():
 	is_openingcutscene=false
 	camera.enabled=false
 	player.camera.enabled=true
-	$world2openingcutscene.visible=false
+	$world2openingcutscene.visible=true
 	$world2main.visible=true
+func toggle_smoke():
+	var smoke1=$world2openingcutscene/smoke1
+	var smoke2=$world2openingcutscene/smoke2
+	var smoke3=$world2openingcutscene/smoke3
+	var smoke4=$world2openingcutscene/smoke4
+	smoke1.emitting=!smoke1.emitting
+	smoke2.emitting=!smoke2.emitting
+	smoke3.emitting=!smoke3.emitting
+	smoke4.emitting=!smoke4.emitting
