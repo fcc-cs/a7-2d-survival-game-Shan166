@@ -287,3 +287,9 @@ position = Vector2(72, -92)
 position = Vector2(-244, 27)
 
 [node name="Player" parent="." instance=ExtResource("1_emx41")]
+
+[node name="collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
+build_mode = 1
+polygon = PackedVector2Array(-407, -281, -405, 86, -283, 89, -285, 192, -405, 196, -405, 277, -407, 289, 403, 286, 403, 34, 295, 38, 293, -116, 312, -120, 311, 6, 367, 4, 367, -171, 296, -169, 296, -155, 293, -178, 403, -176, 403, -285)
