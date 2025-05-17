@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://lhwyxro2tieh"]
+[gd_scene load_steps=15 format=3 uid="uid://lhwyxro2tieh"]
 
 [ext_resource type="PackedScene" uid="uid://c5qy845pwoaup" path="res://Scene/player.tscn" id="1_emx41"]
 [ext_resource type="Texture2D" uid="uid://b6ham72rsv8fn" path="res://Art/survivalgame-terrian-water.png" id="2_pcvp0"]
@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://chlv5edux6djp" path="res://Scene/apple_tree.tscn" id="6_37axr"]
 [ext_resource type="PackedScene" uid="uid://cxeg73c2di4kw" path="res://Scene/stick.tscn" id="6_ol2hl"]
 [ext_resource type="PackedScene" uid="uid://dnyn4r6fikgir" path="res://Scene/slime.tscn" id="8_ddf65"]
+[ext_resource type="PackedScene" uid="uid://buqpfq7i6a8nj" path="res://Scene/world_2.tscn" id="9_h7cfj"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37axr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y56vo"]
 texture = ExtResource("2_pcvp0")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -62,7 +63,7 @@ texture_region_size = Vector2i(40, 40)
 17:2/0 = 0
 18:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ol2hl"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6a5p4"]
 texture = ExtResource("4_37axr")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -132,7 +133,7 @@ texture_region_size = Vector2i(40, 40)
 17:2/0/y_sort_origin = 12
 17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.41118, 7.6204, 10.4428, 6.49145, 9.31382, 14.9586, 0.282238, 14.9586)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddf65"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nka0b"]
 texture = ExtResource("3_pcvp0")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -178,7 +179,7 @@ texture_region_size = Vector2i(40, 40)
 15:2/0 = 0
 17:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h7cfj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0gfnl"]
 texture = ExtResource("2_scul4")
 texture_region_size = Vector2i(40, 40)
 0:0/0 = 0
@@ -266,10 +267,10 @@ texture_region_size = Vector2i(40, 40)
 [sub_resource type="TileSet" id="TileSet_y56vo"]
 tile_size = Vector2i(40, 40)
 physics_layer_0/collision_layer = 1
-sources/8 = SubResource("TileSetAtlasSource_ddf65")
-sources/9 = SubResource("TileSetAtlasSource_h7cfj")
-sources/10 = SubResource("TileSetAtlasSource_37axr")
-sources/11 = SubResource("TileSetAtlasSource_ol2hl")
+sources/8 = SubResource("TileSetAtlasSource_nka0b")
+sources/9 = SubResource("TileSetAtlasSource_0gfnl")
+sources/10 = SubResource("TileSetAtlasSource_y56vo")
+sources/11 = SubResource("TileSetAtlasSource_6a5p4")
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
@@ -307,7 +308,7 @@ position = Vector2(-244, 27)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
 build_mode = 1
-polygon = PackedVector2Array(-407, -281, -405, 86, -283, 89, -285, 192, -405, 196, -405, 277, -407, 289, 403, 286, 403, 34, 295, 38, 293, -116, 312, -120, 311, 6, 367, 4, 367, -171, 296, -169, 296, -155, 293, -178, 403, -176, 403, -285)
+polygon = PackedVector2Array(-408, -284, -407, 85, -286, 86, -283, 187, -410, 189, -407, 284, 405, 287, 413, -2, 388, -4, 389, 33, 293, 34, 294, -120, 310, -118, 313, 8, 372, 7, 371, -27, 549, -31, 552, 247, 880, 245, 882, -282, 558, -283, 550, -87, 373, -88, 371, -163, 299, -159, 297, -177, 411, -177, 413, -283)
 
 [node name="Slime" parent="." instance=ExtResource("8_ddf65")]
 position = Vector2(-149, 132)
@@ -326,3 +327,5 @@ position = Vector2(-74, -129)
 
 [node name="Slime6" parent="." instance=ExtResource("8_ddf65")]
 position = Vector2(299, 212)
+
+[node name="world2" parent="." instance=ExtResource("9_h7cfj")]

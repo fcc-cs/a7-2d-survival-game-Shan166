@@ -159,7 +159,7 @@ radius = 7.0
 radius = 75.1665
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bte5j"]
-radius = 518.386
+radius = 257.194
 
 [node name="Slime" type="CharacterBody2D"]
 script = ExtResource("1_ssh8c")

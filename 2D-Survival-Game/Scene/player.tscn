@@ -343,7 +343,7 @@ shape = SubResource("CircleShape2D_v2t6f")
 zoom = Vector2(2.5, 2.5)
 limit_left = -596
 limit_top = -471
-limit_right = 596
+limit_right = 1076
 limit_bottom = 476
 
 [node name="Inv_UI" parent="." instance=ExtResource("4_ivevv")]
