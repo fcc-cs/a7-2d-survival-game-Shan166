@@ -1,4 +1,8 @@
 extends CharacterBody2D
+signal stick_collected
+signal apple_collected
+signal slime_collected
+
 var speed=100
 var player_state
 var bow_equiped=false
@@ -10,7 +14,7 @@ var mouse_loc_from_player=null
 
 func _physics_process(delta):
 	mouse_loc_from_player=get_global_mouse_position()-self.position
-	print(mouse_loc_from_player)
+
 	var direction=Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	if direction.x==0 and direction.y==0:
 		player_state="Idle"
@@ -82,3 +86,13 @@ func player():
 
 func collect(item):
 	inv.insert(item)
+	print(item)
+	if str(item)=="<Resource#-9223371999944899137>":#stick
+		print("Picked up stick")
+		emit_signal("stick_collected")
+	if str(item)=="<Resource#-9223371999089261112>":#slime
+		print("Picked up slime")
+		emit_signal("stick_collected")
+	if str(item)=="<Resource#-9223372000867646027>":#apple
+		print("Picked up apple")
+		emit_signal("stick_collected")

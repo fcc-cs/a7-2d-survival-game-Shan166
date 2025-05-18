@@ -335,3 +335,7 @@ position = Vector2(299, 212)
 [node name="world2" parent="." instance=ExtResource("9_h7cfj")]
 
 [node name="npc" parent="." instance=ExtResource("10_y56vo")]
+
+[connection signal="apple_collected" from="Player" to="npc" method="_on_player_apple_collected"]
+[connection signal="slime_collected" from="Player" to="npc" method="_on_player_slime_collected"]
+[connection signal="stick_collected" from="Player" to="npc" method="_on_player_stick_collected"]

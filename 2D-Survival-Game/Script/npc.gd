@@ -87,3 +87,15 @@ func _on_dialogue_dialogue_finished() -> void:
 func _on_npc_quest_quest_menu_closed() -> void:
 	is_chatting=false
 	is_roaming=true
+
+
+func _on_player_stick_collected() -> void:
+	$npc_quest.stick_collected()
+
+
+func _on_player_slime_collected() -> void:
+	pass # Replace with function body.
+
+
+func _on_player_apple_collected() -> void:
+	pass # Replace with function body.

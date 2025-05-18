@@ -10,6 +10,7 @@ func _process(delta):
 			print("quest 1 completed")
 			quest1_active=false
 			quest1_completed=true
+			play_finished_quest_anim()
 			
 func quest1_chat():
 	$quest1_ui.visible=true
@@ -33,3 +34,12 @@ func _on_nobutton_1_pressed() -> void:
 	$quest1_ui.visible=false
 	quest1_active=false
 	emit_signal("quest_menu_closed")
+
+func stick_collected():
+	stick+=1
+	print("stick for quest")
+	
+func play_finished_quest_anim():
+	$finished_quest.visible=true
+	await get_tree().create_timer(3).timeout
+	$finished_quest.visible=false
