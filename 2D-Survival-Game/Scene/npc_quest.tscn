@@ -62,6 +62,110 @@ offset_bottom = 48.0
 scale = Vector2(0.3, 0.3)
 text = "No"
 
+[node name="quest2_ui" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -25.0
+offset_top = -45.0
+offset_right = 25.0
+offset_bottom = -16.0
+texture = ExtResource("2_ps5ai")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="quest2_ui"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -1.0
+offset_right = 76.0
+offset_bottom = 20.0
+scale = Vector2(0.4, 0.4)
+text = "Quest"
+scroll_active = false
+
+[node name="Text" type="RichTextLabel" parent="quest2_ui"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 241.0
+offset_bottom = 108.0
+scale = Vector2(0.2, 0.2)
+text = "Could you please collect 3 sticks for me."
+
+[node name="yesbutton2" type="Button" parent="quest2_ui"]
+modulate = Color(0.154351, 0.55766, 3.85046e-07, 1)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 17.0
+offset_right = 52.0
+offset_bottom = 48.0
+scale = Vector2(0.3, 0.3)
+text = "yes"
+
+[node name="nobutton2" type="Button" parent="quest2_ui"]
+modulate = Color(0.87155, 0, 0.0738163, 1)
+layout_mode = 0
+offset_left = 35.0
+offset_top = 17.0
+offset_right = 69.0
+offset_bottom = 48.0
+scale = Vector2(0.3, 0.3)
+text = "No"
+
+[node name="quest3_ui" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -25.0
+offset_top = -45.0
+offset_right = 25.0
+offset_bottom = -16.0
+texture = ExtResource("2_ps5ai")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="quest3_ui"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = -1.0
+offset_right = 76.0
+offset_bottom = 20.0
+scale = Vector2(0.4, 0.4)
+text = "Quest"
+scroll_active = false
+
+[node name="Text" type="RichTextLabel" parent="quest3_ui"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 241.0
+offset_bottom = 108.0
+scale = Vector2(0.2, 0.2)
+text = "Slimes are so scary but tasty, can you please kill all 5 of them for me."
+
+[node name="yesbutton3" type="Button" parent="quest3_ui"]
+modulate = Color(0.154351, 0.55766, 3.85046e-07, 1)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 17.0
+offset_right = 52.0
+offset_bottom = 48.0
+scale = Vector2(0.3, 0.3)
+text = "yes"
+
+[node name="nobutton3" type="Button" parent="quest3_ui"]
+modulate = Color(0.87155, 0, 0.0738163, 1)
+layout_mode = 0
+offset_left = 35.0
+offset_top = 17.0
+offset_right = 69.0
+offset_bottom = 48.0
+scale = Vector2(0.3, 0.3)
+text = "No"
+
 [node name="no_quest" type="NinePatchRect" parent="."]
 visible = false
 layout_mode = 0
@@ -129,3 +233,7 @@ Thank you"
 
 [connection signal="pressed" from="quest1_ui/yesbutton1" to="." method="_on_yesbutton_1_pressed"]
 [connection signal="pressed" from="quest1_ui/nobutton1" to="." method="_on_nobutton_1_pressed"]
+[connection signal="pressed" from="quest2_ui/yesbutton2" to="." method="_on_yesbutton_2_pressed"]
+[connection signal="pressed" from="quest2_ui/nobutton2" to="." method="_on_nobutton_2_pressed"]
+[connection signal="pressed" from="quest3_ui/yesbutton3" to="." method="_on_yesbutton_3_pressed"]
+[connection signal="pressed" from="quest3_ui/nobutton3" to="." method="_on_nobutton_3_pressed"]

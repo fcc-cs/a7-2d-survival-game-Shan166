@@ -93,6 +93,6 @@ func collect(item):
 	if str(item)=="<Resource#-9223372000817314381>":#slime
 		print("Picked up slime")
 		emit_signal("slime_collected")
-	if str(item)=="<Resource#-9223371997864524318>":#apple
+	if str(item)=="<Resource#-9223371997830969884>":#apple
 		print("Picked up apple")
 		emit_signal("apple_collected")
