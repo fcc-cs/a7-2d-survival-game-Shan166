@@ -1,15 +1,19 @@
 extends CharacterBody2D
 var speed=90
-var health=100
 var dead=false
 var player_in_area=false
 var player
 @onready var slime =$slime_colectible
 @export var itemres:InvItem
+@export var max_health := 100
+@onready var health := max_health
+@onready var health_bar: ProgressBar = $HealthBar
 
 func _ready():
-	dead=false
-	
+	health_bar.max_value = max_health
+	health_bar.value = health
+	health_bar.visible = false
+
 func _physics_process(delta):
 	if !dead:
 		$detection_area/CollisionShape2D.disabled=false
@@ -26,7 +30,6 @@ func _on_detection_area_body_entered(body: Node2D) -> void:
 		player_in_area=true
 		player=body
 
-
 func _on_detection_area_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_in_area=false
@@ -38,10 +41,14 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		take_damage(damage)
 		
 func take_damage(damage):
-	health=health-damage
-	if health<=0 and !dead:
+	health -= damage
+	health_bar.value = health
+	health_bar.visible = true
+	
+	if health <= 0 and !dead:
 		death()
-
+		health_bar.visible = false
+		
 func death():
 	dead=true
 	$AnimatedSprite2D.play("death")
@@ -61,7 +68,6 @@ func slime_collect():
 	slime.visible=false
 	player.collect(itemres)
 	queue_free()
-
 
 func _on_collect_area_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):

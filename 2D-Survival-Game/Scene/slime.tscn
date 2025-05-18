@@ -1,9 +1,15 @@
-[gd_scene load_steps=28 format=3 uid="uid://dnyn4r6fikgir"]
+[gd_scene load_steps=30 format=3 uid="uid://dnyn4r6fikgir"]
 
 [ext_resource type="Script" uid="uid://bkcyplbtenaey" path="res://Script/slime.gd" id="1_ssh8c"]
 [ext_resource type="Resource" uid="uid://bl3dankaymjl" path="res://Inventory/Items/slime.tres" id="2_bte5j"]
 [ext_resource type="Texture2D" uid="uid://b6ssj7847wnli" path="res://Art/survivalgame-enemy-slime.png" id="2_vnxak"]
 [ext_resource type="PackedScene" uid="uid://b6lpqdvwkxotw" path="res://Scene/slime_colectible.tscn" id="4_efpik"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bte5j"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efpik"]
+bg_color = Color(0.583147, 0.0492532, 2.40654e-07, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bte5j"]
 atlas = ExtResource("2_vnxak")
@@ -165,6 +171,17 @@ radius = 257.194
 script = ExtResource("1_ssh8c")
 itemres = ExtResource("2_bte5j")
 
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -16.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = -7.0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/background = SubResource("StyleBoxFlat_bte5j")
+theme_override_styles/fill = SubResource("StyleBoxFlat_efpik")
+value = 50.0
+show_percentage = false
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m2bwb")
 animation = &"death"
@@ -191,6 +208,7 @@ visible = false
 [node name="collect_area" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collect_area"]
+position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_bte5j")
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

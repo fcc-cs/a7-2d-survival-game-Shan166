@@ -29,7 +29,7 @@ func _on_yesbutton_1_pressed() -> void:
 	print("quest has started")
 	$quest1_ui.visible=false
 	quest1_active=true
-	stick=0
+	apple=0
 	emit_signal("quest_menu_closed")
 
 func _on_nobutton_1_pressed() -> void:
