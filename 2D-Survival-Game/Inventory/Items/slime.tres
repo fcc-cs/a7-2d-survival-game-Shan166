@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b6610hfu52oeh" path="res://Art/SlimeIcon.png" id="2_nxwsc"]
 
 [resource]
+resource_name = "slime"
 script = ExtResource("1_13jje")
 name = "slime"
 texture = ExtResource("2_nxwsc")

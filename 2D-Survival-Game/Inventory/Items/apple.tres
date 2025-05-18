@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d30j4p33e6bye" path="res://Art/apple-icon.png" id="2_b1j0l"]
 
 [resource]
+resource_name = "apple"
 script = ExtResource("1_dop0b")
 name = "apple"
 texture = ExtResource("2_b1j0l")

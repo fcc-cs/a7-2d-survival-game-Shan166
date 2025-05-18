@@ -61,7 +61,6 @@ func _on_yesbutton_1_pressed() -> void:
 	print("quest has started")
 	$quest1_ui.visible=false
 	quest1_active=true
-	apple=0
 	emit_signal("quest_menu_closed")
 
 func _on_nobutton_1_pressed() -> void:
@@ -90,7 +89,6 @@ func _on_yesbutton_2_pressed() -> void:
 	print("quest has started")
 	$quest2_ui.visible=false
 	quest2_active=true
-	stick=0
 	emit_signal("quest_menu_closed")
 
 func _on_nobutton_2_pressed() -> void:
@@ -102,7 +100,6 @@ func _on_yesbutton_3_pressed() -> void:
 	print("quest has started")
 	$quest3_ui.visible=false
 	quest3_active=true
-	slime=0
 	emit_signal("quest_menu_closed")
 
 func _on_nobutton_3_pressed() -> void:
