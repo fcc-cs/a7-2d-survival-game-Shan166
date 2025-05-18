@@ -52,7 +52,6 @@ func _process(delta):
 		is_chatting=true
 		$AnimatedSprite2D.play("idle")
 	if Input.is_action_just_pressed("quest"):
-		print("quest has started")
 		$npc_quest.next_quest()
 		is_roaming=false
 		is_chatting=true
@@ -94,8 +93,8 @@ func _on_player_stick_collected() -> void:
 
 
 func _on_player_slime_collected() -> void:
-	pass # Replace with function body.
+	$npc_quest.slime_collected()
 
 
 func _on_player_apple_collected() -> void:
-	pass # Replace with function body.
+	$npc_quest.apple_collected()

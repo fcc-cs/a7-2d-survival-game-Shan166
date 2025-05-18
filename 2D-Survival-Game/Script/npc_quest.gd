@@ -3,10 +3,12 @@ signal quest_menu_closed
 var quest1_active=false
 var quest1_completed=false
 var stick=0
+var slime=0
+var apple=0
 
 func _process(delta):
 	if quest1_active:
-		if stick==3:
+		if apple==1:
 			print("quest 1 completed")
 			quest1_active=false
 			quest1_completed=true
@@ -24,11 +26,11 @@ func next_quest():
 		$no_quest.visible=false
 		
 func _on_yesbutton_1_pressed() -> void:
+	print("quest has started")
 	$quest1_ui.visible=false
 	quest1_active=true
 	stick=0
 	emit_signal("quest_menu_closed")
-
 
 func _on_nobutton_1_pressed() -> void:
 	$quest1_ui.visible=false
@@ -38,6 +40,14 @@ func _on_nobutton_1_pressed() -> void:
 func stick_collected():
 	stick+=1
 	print("stick for quest")
+	
+func slime_collected():
+	slime+=1
+	print("slime for quest")
+	
+func apple_collected():
+	apple+=1
+	print("apple for quest")
 	
 func play_finished_quest_anim():
 	$finished_quest.visible=true

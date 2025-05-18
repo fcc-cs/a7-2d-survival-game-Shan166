@@ -36,30 +36,30 @@ scroll_active = false
 [node name="Text" type="RichTextLabel" parent="quest1_ui"]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 6.0
-offset_right = 161.0
-offset_bottom = 79.0
-scale = Vector2(0.3, 0.3)
-text = "Could you pick up 3 sticks."
+offset_top = 8.0
+offset_right = 241.0
+offset_bottom = 108.0
+scale = Vector2(0.2, 0.2)
+text = "Could you please bring me 1 apple from the forbidden hill in the east."
 
 [node name="yesbutton1" type="Button" parent="quest1_ui"]
 modulate = Color(0.154351, 0.55766, 3.85046e-07, 1)
 layout_mode = 0
 offset_left = 18.0
-offset_top = 15.0
+offset_top = 17.0
 offset_right = 52.0
-offset_bottom = 46.0
-scale = Vector2(0.4, 0.4)
+offset_bottom = 48.0
+scale = Vector2(0.3, 0.3)
 text = "yes"
 
 [node name="nobutton1" type="Button" parent="quest1_ui"]
 modulate = Color(0.87155, 0, 0.0738163, 1)
 layout_mode = 0
 offset_left = 35.0
-offset_top = 15.0
+offset_top = 17.0
 offset_right = 69.0
-offset_bottom = 46.0
-scale = Vector2(0.4, 0.4)
+offset_bottom = 48.0
+scale = Vector2(0.3, 0.3)
 text = "No"
 
 [node name="no_quest" type="NinePatchRect" parent="."]

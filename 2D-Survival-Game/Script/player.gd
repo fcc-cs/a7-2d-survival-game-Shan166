@@ -87,12 +87,12 @@ func player():
 func collect(item):
 	inv.insert(item)
 	print(item)
-	if str(item)=="<Resource#-9223371999944899137>":#stick
+	if str(item)=="<Resource#-9223372001672952406>":#stick
 		print("Picked up stick")
 		emit_signal("stick_collected")
-	if str(item)=="<Resource#-9223371999089261112>":#slime
+	if str(item)=="<Resource#-9223372000817314381>":#slime
 		print("Picked up slime")
-		emit_signal("stick_collected")
-	if str(item)=="<Resource#-9223372000867646027>":#apple
+		emit_signal("slime_collected")
+	if str(item)=="<Resource#-9223371997864524318>":#apple
 		print("Picked up apple")
-		emit_signal("stick_collected")
+		emit_signal("apple_collected")

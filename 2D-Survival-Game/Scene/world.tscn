@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://lhwyxro2tieh"]
+[gd_scene load_steps=15 format=3 uid="uid://lhwyxro2tieh"]
 
 [ext_resource type="PackedScene" uid="uid://c5qy845pwoaup" path="res://Scene/player.tscn" id="1_emx41"]
 [ext_resource type="Texture2D" uid="uid://b6ham72rsv8fn" path="res://Art/survivalgame-terrian-water.png" id="2_pcvp0"]
 [ext_resource type="Texture2D" uid="uid://jju0kox8rkgd" path="res://Art/survivalgame-terrian-defult.png" id="2_scul4"]
 [ext_resource type="Texture2D" uid="uid://cun1odnkyeap0" path="res://Art/survivalgame-terrian-cliffs.png" id="3_pcvp0"]
 [ext_resource type="Texture2D" uid="uid://dfqya25v27tb1" path="res://Art/survivalgame-trees.png" id="4_37axr"]
-[ext_resource type="PackedScene" uid="uid://chlv5edux6djp" path="res://Scene/apple_tree.tscn" id="6_37axr"]
 [ext_resource type="PackedScene" uid="uid://cxeg73c2di4kw" path="res://Scene/stick.tscn" id="6_ol2hl"]
 [ext_resource type="PackedScene" uid="uid://dnyn4r6fikgir" path="res://Scene/slime.tscn" id="8_ddf65"]
 [ext_resource type="PackedScene" uid="uid://buqpfq7i6a8nj" path="res://Scene/world_2.tscn" id="9_h7cfj"]
@@ -287,12 +286,6 @@ layer_1/name = "Layer2"
 layer_1/y_sort_enabled = true
 layer_1/tile_data = PackedInt32Array(196601, 524299, 1, 327679, 524299, 1, -65530, 524299, 1, -327679, 524299, 1, -65542, 524299, 1, -131072, 524299, 1, 327684, 524299, 2, 196605, 1114123, 2, -196612, 1114123, 2, -196609, 1114123, 2, -393208, 1114123, 2, -393211, 1114123, 2, -327688, 1114123, 2, -9, 1114123, 2, -131080, 1114123, 2, 393208, 1114123, 2, 393212, 1114123, 2, 131078, 1114123, 0, -327672, 1114123, 2, -131064, 1114123, 1)
 layer_2/name = "Layer3"
-
-[node name="Apple_Tree" parent="." instance=ExtResource("6_37axr")]
-position = Vector2(115, 109)
-
-[node name="Apple_Tree2" parent="." instance=ExtResource("6_37axr")]
-position = Vector2(-169, -84)
 
 [node name="Stick" parent="." instance=ExtResource("6_ol2hl")]
 position = Vector2(-47, 34)
