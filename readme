@@ -1,0 +1,6 @@
+Added health bar to the slime, added working quest2 and quest3, fixed npc world boundary collision, added diagnol
+movement to npc and fixed the resource value issue as stretch goal.
+When you incounter npc press C to chat with him to go to next prompt press enter.
+To start the quest press Q near npc to get quest promp and then click yes to start the quest after completing
+the quest you can go back to the npc and take a new quest their are a total of 3 quests.
+To use bow press E, to shoot left click mouse button, to open inventory press I, to collect apple from tree press E near the tree.
