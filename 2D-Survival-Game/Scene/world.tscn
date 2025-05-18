@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://lhwyxro2tieh"]
+[gd_scene load_steps=16 format=3 uid="uid://lhwyxro2tieh"]
 
 [ext_resource type="PackedScene" uid="uid://c5qy845pwoaup" path="res://Scene/player.tscn" id="1_emx41"]
 [ext_resource type="Texture2D" uid="uid://b6ham72rsv8fn" path="res://Art/survivalgame-terrian-water.png" id="2_pcvp0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cxeg73c2di4kw" path="res://Scene/stick.tscn" id="6_ol2hl"]
 [ext_resource type="PackedScene" uid="uid://dnyn4r6fikgir" path="res://Scene/slime.tscn" id="8_ddf65"]
 [ext_resource type="PackedScene" uid="uid://buqpfq7i6a8nj" path="res://Scene/world_2.tscn" id="9_h7cfj"]
+[ext_resource type="PackedScene" uid="uid://c3wg45i3qfkty" path="res://Scene/npc.tscn" id="10_y56vo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y56vo"]
 texture = ExtResource("2_pcvp0")
@@ -329,3 +330,5 @@ position = Vector2(-74, -129)
 position = Vector2(299, 212)
 
 [node name="world2" parent="." instance=ExtResource("9_h7cfj")]
+
+[node name="npc" parent="." instance=ExtResource("10_y56vo")]
