@@ -333,7 +333,7 @@ inv = ExtResource("2_58ae2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ygbnx")
-animation = &"Death"
+animation = &"NE-Walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 2)

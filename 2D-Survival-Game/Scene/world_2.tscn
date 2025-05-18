@@ -370,6 +370,7 @@ layer_1/tile_data = PackedInt32Array(-196598, 524299, 1, -196595, 524299, 0, -13
 layer_2/name = "Layer3"
 
 [node name="ColorRect" type="ColorRect" parent="world2openingcutscene"]
+visible = false
 offset_left = 518.0
 offset_top = -466.0
 offset_right = 1082.0

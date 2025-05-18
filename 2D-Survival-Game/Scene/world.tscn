@@ -311,6 +311,9 @@ position = Vector2(-244, 27)
 build_mode = 1
 polygon = PackedVector2Array(-408, -284, -407, 85, -286, 86, -283, 187, -410, 189, -407, 284, 405, 287, 413, -2, 388, -4, 389, 33, 293, 34, 294, -120, 310, -118, 313, 8, 372, 7, 371, -27, 549, -31, 552, 247, 880, 245, 882, -282, 558, -283, 550, -87, 373, -88, 371, -163, 299, -159, 297, -177, 411, -177, 413, -283)
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="collisions"]
+polygon = PackedVector2Array(652, -215, 652, -114, 677, -123, 672, -208, 771, -210, 773, 88, 674, 82, 675, -6, 652, -1, 659, 107, 782, 109, 778, -217)
+
 [node name="Slime" parent="." instance=ExtResource("8_ddf65")]
 position = Vector2(-149, 132)
 

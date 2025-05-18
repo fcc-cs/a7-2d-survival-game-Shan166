@@ -15,23 +15,33 @@ func _ready():
 	start_pos=position
 
 func _process(delta):
-	if current_state==0 or current_state==1:
+	if current_state == IDLE or current_state == NEW_DIR:
 		$AnimatedSprite2D.play("idle")
-	elif current_state==2 and !is_chatting:
-		if dir.y == -1:
+	elif current_state == MOVE and !is_chatting:
+		if dir.y < -0.5 and dir.x > 0.5:
+			$AnimatedSprite2D.play("NE-Walk")
+		elif dir.y > 0.5 and dir.x > 0.5:
+			$AnimatedSprite2D.play("SE-Walk")
+		elif dir.y > 0.5 and dir.x < -0.5:
+			$AnimatedSprite2D.play("SW-Walk")
+		elif dir.y < -0.5 and dir.x < -0.5:
+			$AnimatedSprite2D.play("NW-Walk")
+		elif dir.y == -1:
 			$AnimatedSprite2D.play("N-Walk")
-		if dir.x == +1:
+		elif dir.x == +1:
 			$AnimatedSprite2D.play("E-Walk")
-		if dir.y == 1:
+		elif dir.y == 1:
 			$AnimatedSprite2D.play("S-Walk")
-		if dir.x == -1:
+		elif dir.x == -1:
 			$AnimatedSprite2D.play("W-Walk")
+		else:
+			$AnimatedSprite2D.play("idle")
 	if is_roaming:
 		match current_state:
 			IDLE:
 				pass
 			NEW_DIR:
-				dir=choose([Vector2.RIGHT,Vector2.UP,Vector2.LEFT,Vector2.DOWN])
+				dir=choose([Vector2.RIGHT,Vector2.UP,Vector2.LEFT,Vector2.DOWN,Vector2.RIGHT+Vector2.UP,Vector2.UP+Vector2.LEFT,Vector2.LEFT+Vector2.DOWN,Vector2.DOWN+Vector2.RIGHT])
 			MOVE:
 				move(delta)
 				
@@ -48,7 +58,8 @@ func choose(array):
 	
 func move (delta):
 	if !is_chatting:
-		position +=dir*speed*delta
+		velocity=dir*speed
+		move_and_slide()
 		
 func _on_chat_area_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
